@@ -1,0 +1,25 @@
+{
+  "products": [
+    {
+      "product_id": "6c54a3a1-7155-43f2-ac0e-d373fdfc9bf2",
+      "title": "T-shirt",
+      "description": "A white T-shirt",
+      "price": "9.99",
+      "currency": "eur"
+    },
+    {
+      "product_id": "ba9eaf37-6eb9-49e2-8048-7728242a6586",
+      "title": "Jacket",
+      "description": "A Black Jacket",
+      "price": "19.99",
+      "currency": "eur"
+    },
+    {
+      "product_id": "6b368cbd-efcb-4a81-8ef7-5859d1a70467",
+      "title": "Trousers",
+      "description": "A blue trousers",
+      "price": "39.99",
+      "currency": "eur"
+    }
+  ]
+}
