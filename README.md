@@ -9,3 +9,8 @@ npm run start:react
 ```
 npm run start:vue
 ```
+
+## Run Api
+```
+npm run start:api
+```
