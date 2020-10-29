@@ -1,18 +1,39 @@
 <template>
   <Main msg="Welcome to Your Vue.js + TypeScript App"/>
-  <ProductList />
+  <ProductList :on-select-product="handleAddToCart"/>
+  <p v-if="basket">Items on basket: {{basket.items.length}}</p>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 import Main from './infrastructure/components/Main.vue'
 import ProductList from '@/infrastructure/components/ProductList.vue'
+import { Product } from '@/domain/models/Product'
+import { addProductToBasket } from '@/domain/services/Basket.service'
+import { Basket } from '@/domain/models/Basket'
+
+type DataProps = {
+  basket: Basket|null;
+}
 
 export default defineComponent({
   name: 'App',
   components: {
     Main,
     ProductList
+  },
+  methods: {
+    handleAddToCart (product: Product) {
+      this.basket = addProductToBasket(product, this.basket)
+    }
+  },
+  data (): DataProps {
+    return {
+      basket: null
+    }
+  },
+  mounted () {
+    this.basket = null
   }
 })
 </script>
