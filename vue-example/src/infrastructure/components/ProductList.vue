@@ -9,11 +9,15 @@ import { defineComponent } from 'vue'
 import { getProducts } from '@/domain/repositories/product.repository'
 import { Product } from '@/domain/models/Product'
 
+type DataProps = {
+  products: Product[];
+}
+
 export default defineComponent({
   name: 'ProductList',
-  data () {
+  data (): DataProps {
     return {
-      products: [] as Product[]
+      products: []
     }
   },
   mounted () {
