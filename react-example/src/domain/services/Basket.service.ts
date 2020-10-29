@@ -14,7 +14,7 @@ const increaseBasket = (basket: Basket, product: Product) => ({
   items: [...basket.items, product]
 })
 
-export const addProductToBasket = (product: Product, basket?: Basket): Basket =>
+export const addProductToBasket = (product: Product, basket?: Basket|null): Basket =>
   basket
     ? hasProduct(basket, product)
         ? basket
