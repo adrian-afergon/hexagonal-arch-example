@@ -1,6 +1,8 @@
 <template>
   <ul>
-    <li v-for="product in products " :key="product.id"> {{ product.title }}</li>
+    <li v-for="product in products " :key="product.id">
+      <button v-on:click="() => { onSelectProduct(product) }">{{ product.title }}</button>
+    </li>
   </ul>
 </template>
 
@@ -15,6 +17,9 @@ type DataProps = {
 
 export default defineComponent({
   name: 'ProductList',
+  props: {
+    onSelectProduct: { type: Function }
+  },
   data (): DataProps {
     return {
       products: []
