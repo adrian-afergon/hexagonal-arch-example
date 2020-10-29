@@ -1,11 +1,11 @@
-import * as uuid from 'uuid'
 import { Product } from '../models/Product'
 import { Basket } from '../models/Basket'
+import { generateUid } from '@/infrastructure/uid/uid'
 
 const hasProduct = (basket: Basket, product: Product) => basket.items.find((item) => item.id === product.id)
 
 const createBasket = (product: Product) => ({
-  id: uuid.v4(),
+  id: generateUid(),
   items: [product]
 })
 
