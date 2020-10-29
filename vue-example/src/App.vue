@@ -1,15 +1,18 @@
 <template>
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <Main msg="Welcome to Your Vue.js + TypeScript App"/>
+  <ProductList />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import HelloWorld from './infrastructure/components/HelloWorld.vue'
+import Main from './infrastructure/components/Main.vue'
+import ProductList from '@/infrastructure/components/ProductList.vue'
 
 export default defineComponent({
   name: 'App',
   components: {
-    HelloWorld
+    Main,
+    ProductList
   }
 })
 </script>

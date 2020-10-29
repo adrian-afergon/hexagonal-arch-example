@@ -1,4 +1,5 @@
 import React from 'react'
+import { ProductList } from './ProductList'
 
 type AppProps = {
   msg: string
@@ -6,7 +7,8 @@ type AppProps = {
 
 const App: React.FC<AppProps> = ({ msg }) => (
   <div className="App">
-    <h1>{ msg }</h1>
+    <h1>{msg}</h1>
+    <ProductList/>
   </div>
 )
 
