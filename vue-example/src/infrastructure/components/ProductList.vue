@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { getProducts } from '@/domain/repositories/product.repository'
+import { getProducts } from '@/domain/services/Product.service'
 import { Product } from '@/domain/models/Product'
 
 type DataProps = {
