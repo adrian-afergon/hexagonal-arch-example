@@ -1,14 +1,14 @@
 <template>
   <ul>
     <li v-for="product in products " :key="product.id">
-      <button v-on:click="() => { onSelectProduct(product) }">{{ product.title }}</button>
+      <button @click="() => { onSelectProduct(product) }">{{ product.title }}</button>
     </li>
   </ul>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { getProducts } from '@/domain/repositories/product.repository'
+import { getProducts } from '@/domain/services/Product.service'
 import { Product } from '@/domain/models/Product'
 
 type DataProps = {
