@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Product } from '../../domain/models/Product'
-import { getProducts } from '../../domain/repositories/product.repository'
+import { getProducts } from '../../domain/services/Product.service'
 
 type ProductListProps = {
   onSelectProduct: (product: Product) => void
