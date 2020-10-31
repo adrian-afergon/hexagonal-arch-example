@@ -1,7 +1,7 @@
 <template>
   <ul>
     <li v-for="product in products " :key="product.id">
-      <button v-on:click="() => { onSelectProduct(product) }">{{ product.title }}</button>
+      <button @click="() => { onSelectProduct(product) }">{{ product.title }}</button>
     </li>
   </ul>
 </template>
