@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Product } from '../../domain/models/Product'
-import { getProducts } from '../../domain/services/Product.service'
+import { productService } from '../../domain/services/Product.service'
 
 type ProductListProps = {
   onSelectProduct: (product: Product) => void
@@ -10,7 +10,7 @@ export const ProductList: React.FC<ProductListProps> = ({ onSelectProduct }) => 
   const [products, setProducts] = React.useState<Product[]>([])
 
   React.useEffect(() => {
-    getProducts().then(setProducts)
+    productService.getProducts().then(setProducts)
   }, [])
 
   return (

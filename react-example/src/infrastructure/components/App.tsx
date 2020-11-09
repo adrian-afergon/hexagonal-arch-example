@@ -2,7 +2,7 @@ import React from 'react'
 import { ProductList } from './ProductList'
 import { Basket } from '../../domain/models/Basket'
 import { Product } from '../../domain/models/Product'
-import { addProductToBasket } from '../../domain/services/Basket.service'
+import { basketService } from '../../domain/services/Basket.service'
 
 type AppProps = {
   msg: string
@@ -12,7 +12,7 @@ const App: React.FC<AppProps> = ({ msg }) => {
   const [basket, setBasket] = React.useState<Basket|null>(null)
 
   const handleAddToCart = (product: Product) => {
-    setBasket(addProductToBasket(product, basket))
+    setBasket(basketService.addProductToBasket(product, basket))
   }
 
   return (
