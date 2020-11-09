@@ -14,9 +14,13 @@ const increaseBasket = (basket: Basket, product: Product) => ({
   items: [...basket.items, product]
 })
 
-export const addProductToBasket = (product: Product, basket?: Basket): Basket =>
+const addProductToBasket = (product: Product, basket?: Basket): Basket =>
   basket
     ? hasProduct(basket, product)
         ? basket
         : increaseBasket(basket, product)
     : createBasket(product)
+
+export const basketService = {
+  addProductToBasket
+}
