@@ -9,7 +9,7 @@ import { defineComponent } from 'vue'
 import Main from './infrastructure/components/Main.vue'
 import ProductList from '@/infrastructure/components/ProductList.vue'
 import { Product } from '@/domain/models/Product'
-import { addProductToBasket } from '@/domain/services/Basket.service'
+import { basketService } from '@/domain/services/Basket.service'
 import { Basket } from '@/domain/models/Basket'
 
 type DataProps = {
@@ -24,7 +24,7 @@ export default defineComponent({
   },
   methods: {
     handleAddToCart (product: Product) {
-      this.basket = addProductToBasket(product, this.basket)
+      this.basket = basketService.addProductToBasket(product, this.basket)
     }
   },
   data (): DataProps {

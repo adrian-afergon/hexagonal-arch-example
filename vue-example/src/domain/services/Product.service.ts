@@ -1,5 +1,7 @@
-import { getProducts as getProductsRepository } from '../../infrastructure/repositories/product.repository'
+import { productRepository } from '../../infrastructure/repositories/product.repository'
 
-export const getProducts = () => {
-  return getProductsRepository()
+export const productService = {
+  getProducts: () => {
+    return productRepository.getProducts()
+  }
 }

@@ -8,7 +8,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { getProducts } from '@/domain/services/Product.service'
+import { productService } from '@/domain/services/Product.service'
 import { Product } from '@/domain/models/Product'
 
 type DataProps = {
@@ -26,7 +26,7 @@ export default defineComponent({
     }
   },
   mounted () {
-    getProducts().then(response => (this.products = response))
+    productService.getProducts().then(response => (this.products = response))
   }
 })
 </script>
