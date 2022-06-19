@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start:react": "npm run start --prefix ./react-example",
+    "start:next": "npm run dev --prefix ./next-example",
     "start:vue": "npm run serve --prefix ./vue-example",
     "start:api": "npm run start --prefix ./api-example"
   },

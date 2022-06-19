@@ -5,6 +5,11 @@
 npm run start:react
 ```
 
+## Run Next example
+```
+npm run start:next
+```
+
 ## Run Vue example
 ```
 npm run start:vue
