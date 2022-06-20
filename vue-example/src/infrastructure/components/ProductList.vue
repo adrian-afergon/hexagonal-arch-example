@@ -8,25 +8,14 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { productService } from '@/domain/services/Product.service'
+import type { PropType } from 'vue'
 import { Product } from '@/domain/models/Product'
-
-type DataProps = {
-  products: Product[];
-}
 
 export default defineComponent({
   name: 'ProductList',
   props: {
+    products: { type: Array as PropType<Product[]> },
     onSelectProduct: { type: Function }
-  },
-  data (): DataProps {
-    return {
-      products: []
-    }
-  },
-  mounted () {
-    productService.getProducts().then(response => (this.products = response))
   }
 })
 </script>
